@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout          # Clone your repo
+        uses: actions/checkout@v1          # Clone your repo
           
       - name: Get hostname
         run: hostname                    # Shell command
