@@ -26,4 +26,4 @@ jobs:
         run: ls
           
       - name: Install TF
-        run: bash ./scripts/install.sh
+        run: sudo ./scripts/install.sh
