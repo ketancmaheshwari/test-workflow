@@ -1,0 +1,24 @@
+# .github/workflows/ci.yml
+
+name: CI                          # Display name in GitHub UI
+
+on:                               # TRIGGER: when does this run?
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:                           # JOB name (can have many jobs)
+    runs-on: ubuntu-latest        # Runner OS
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout          # Clone your repo
+          
+      - name: Get hostname
+        run: hostname                    # Shell command
+
+      - name: Get date
+        run: date +%s
+
