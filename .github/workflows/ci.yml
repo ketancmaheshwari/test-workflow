@@ -22,3 +22,5 @@ jobs:
       - name: Get date
         run: date +%s
 
+      - name: Get files
+        run: ls
