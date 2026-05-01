@@ -26,10 +26,13 @@ jobs:
         run: ls
           
       - name: Install TF
-        run: sudo ./scripts/install.sh
+        run: sudo ./scripts/install.sh >/dev/null
 
       - name: Download Data
-        run: wget https://github.com/ketancmaheshwari/impecc-data/raw/refs/heads/main/BDB.tgz
+        run: wget https://github.com/ketancmaheshwari/impecc-data/raw/refs/heads/main/BDB.tgz >/dev/null
 
       - name: Untar Data
-        run: tar zxvf BDB.tgz
+        run: tar zxvf BDB.tgz >/dev/null
+
+      - name: Activate Env
+        run: source /opt/hpc_env/bin/activate
