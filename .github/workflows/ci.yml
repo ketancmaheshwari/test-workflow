@@ -27,3 +27,9 @@ jobs:
           
       - name: Install TF
         run: sudo ./scripts/install.sh
+
+      - name: Download Data
+        run: wget https://github.com/ketancmaheshwari/impecc-data/raw/refs/heads/main/BDB.tgz
+
+      - name: Untar Data
+        run: tar zxvf BDB.tgz
